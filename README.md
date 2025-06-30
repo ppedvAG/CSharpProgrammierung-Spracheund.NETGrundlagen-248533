@@ -8,31 +8,31 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 -	[x]  .NET Versionen
 -	[x]  Projekte und Projektmappen
 -	[x]  HelloWorld.cs
--	[ ]  Startprojekt festlegen
+-	[x]  Startprojekt festlegen
 
 ## M02 | VARIABLEN, DATENTYPEN, KONVERTIERUNGEN und OPERATOREN
 
--	[ ]  Sprachgrundlagen
--	[ ]  Variablen & Datentypen
--	[ ]  Aus- und Eingaben
--	[ ]  Parsing & Casting
--	[ ]  Operatoren
+-	[x]  Sprachgrundlagen
+-	[x]  Variablen & Datentypen
+-	[x]  Aus- und Eingaben
+-	[x]  Parsing & Casting
+-	[x]  Operatoren
 
 ## M03 | ARRAYS und BEDINGUNGEN
 
--	[ ]  eindimensionale Arrays
--	[ ]  mehrdimensionale Arrays
--	[ ]  logische Operatoren
--	[ ]  if-Abfrage
+-	[x]  eindimensionale Arrays
+-	[x]  mehrdimensionale Arrays
+-	[x]  logische Operatoren
+-	[x]  if-Abfrage
 -	[ ]  Trinäre Operator
 
 ## M04 | SCHLEIFEN und ENUMS
 
+-	[ ]  Enums
 -	[ ]  while-Schleifen
 -	[ ]  do-while-Schleife
 -	[ ]  for-Schleife
 -	[ ]  foreach-Schleife
--	[ ]  Enums
 
 ## M05 | Funktionen
 
