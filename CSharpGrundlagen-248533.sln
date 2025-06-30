@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M000_Intro", "M000_Intro", 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M002_Variablen", "M002_Variablen", "{B25D8417-0834-409E-81C4-7E380074A439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Variables.csproj", "{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,12 +26,17 @@ Global
 		{8ADB3B23-E2EF-43C1-9083-25AB3F4E482B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADB3B23-E2EF-43C1-9083-25AB3F4E482B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADB3B23-E2EF-43C1-9083-25AB3F4E482B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8ADB3B23-E2EF-43C1-9083-25AB3F4E482B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B} = {B25D8417-0834-409E-81C4-7E380074A439}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4F81670-3076-48F8-A356-A3B70D3DC1DF}
