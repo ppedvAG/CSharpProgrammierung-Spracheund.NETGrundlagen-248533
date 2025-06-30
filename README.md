@@ -36,13 +36,13 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M05 | Funktionen
 
--	[ ]  Funktionen
--	[ ]  Modifier
--	[ ]  Parameter
--	[ ]  optionale Parameter
--	[ ]  params
--	[ ]  out
--	[ ]  Überladung
+-	[x]  Funktionen
+-	[x]  Modifier
+-	[x]  Parameter
+-	[x]  optionale Parameter
+-	[x]  params
+-	[x]  out
+-	[x]  Überladung
 
 ## M06 | OOP - NAMESPACES, KLASSEN, FELDER und KAPSELUNGEN
 
