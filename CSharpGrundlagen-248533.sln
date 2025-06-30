@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Vari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2_Conversion", "Lab2_Conversion\Lab2_Conversion.csproj", "{482DEBCA-6C84-4F99-AD16-474AFAF0642E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M003_Arrays-Conditions", "M003_Arrays-Conditions", "{E33C4730-3742-4CF5-94E7-2036A26DA110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condition-Arrays", "Condition-Arrays\Condition-Arrays.csproj", "{8278312A-F5E3-4674-8A73-E440C6F1B0BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,10 @@ Global
 		{482DEBCA-6C84-4F99-AD16-474AFAF0642E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{482DEBCA-6C84-4F99-AD16-474AFAF0642E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{482DEBCA-6C84-4F99-AD16-474AFAF0642E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8278312A-F5E3-4674-8A73-E440C6F1B0BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8278312A-F5E3-4674-8A73-E440C6F1B0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8278312A-F5E3-4674-8A73-E440C6F1B0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8278312A-F5E3-4674-8A73-E440C6F1B0BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{8ADB3B23-E2EF-43C1-9083-25AB3F4E482B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{52D62BED-BD1A-4482-AB2F-B4F9A3F5087B} = {B25D8417-0834-409E-81C4-7E380074A439}
 		{482DEBCA-6C84-4F99-AD16-474AFAF0642E} = {B25D8417-0834-409E-81C4-7E380074A439}
+		{8278312A-F5E3-4674-8A73-E440C6F1B0BC} = {E33C4730-3742-4CF5-94E7-2036A26DA110}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4F81670-3076-48F8-A356-A3B70D3DC1DF}
