@@ -28,11 +28,11 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M04 | SCHLEIFEN und ENUMS
 
--	[ ]  Enums
--	[ ]  while-Schleifen
--	[ ]  do-while-Schleife
--	[ ]  for-Schleife
--	[ ]  foreach-Schleife
+-	[x]  while-Schleifen
+-	[x]  do-while-Schleife
+-	[x]  for-Schleife
+-	[x]  foreach-Schleife
+-	[x]  Enums
 
 ## M05 | Funktionen
 

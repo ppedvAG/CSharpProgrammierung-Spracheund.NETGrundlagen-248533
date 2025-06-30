@@ -46,7 +46,7 @@
     //Abfrage des User-Tipps
     Console.Write("Bitte gib deinen Tipp ab (Ganzzahl zwischen 0 und 100): ");
     int input = int.Parse(Console.ReadLine());
-
+    
     //Prüfung des Zahlenbereiches des Tipps
     if (input < 0 || input > 100)
         Console.WriteLine("Dein Tipp ist außerhalb des Zahlenbereiches.");
