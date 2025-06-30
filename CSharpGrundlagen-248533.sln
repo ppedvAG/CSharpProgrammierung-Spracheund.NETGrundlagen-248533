@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops-Enums", "Loops-Enums\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab4_Calc", "Lab4_Calc\Lab4_Calc.csproj", "{DD3860A4-3FD6-4AE8-8207-5A80CC5B610E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M005_Functions", "M005_Functions", "{ACC11E3A-FDEA-429C-AAFD-E23F8B83589F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "Functions\Functions.csproj", "{F4343AC7-7D7E-41CF-A7AE-A9CBED14EF81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,10 @@ Global
 		{DD3860A4-3FD6-4AE8-8207-5A80CC5B610E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD3860A4-3FD6-4AE8-8207-5A80CC5B610E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD3860A4-3FD6-4AE8-8207-5A80CC5B610E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4343AC7-7D7E-41CF-A7AE-A9CBED14EF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4343AC7-7D7E-41CF-A7AE-A9CBED14EF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4343AC7-7D7E-41CF-A7AE-A9CBED14EF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4343AC7-7D7E-41CF-A7AE-A9CBED14EF81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,7 @@ Global
 		{25D4DAD7-293A-41DB-927C-91CD33361D89} = {E33C4730-3742-4CF5-94E7-2036A26DA110}
 		{B8D790AE-A1B4-40A1-8D58-EDB02B9FC912} = {0E3FBF04-C510-444B-ABC8-253907A03932}
 		{DD3860A4-3FD6-4AE8-8207-5A80CC5B610E} = {0E3FBF04-C510-444B-ABC8-253907A03932}
+		{F4343AC7-7D7E-41CF-A7AE-A9CBED14EF81} = {ACC11E3A-FDEA-429C-AAFD-E23F8B83589F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4F81670-3076-48F8-A356-A3B70D3DC1DF}
