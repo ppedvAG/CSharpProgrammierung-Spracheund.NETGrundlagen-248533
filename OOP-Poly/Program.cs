@@ -6,11 +6,55 @@ namespace OOP_Poly
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             // Geht nicht, da die Basisklasse abstrakt ist
             //var bunny = new CreatureBase("Bunny", 3); 
 
-            RunApplication();
+            //RunApplication();
 
+            Console.WriteLine("\n10 Zufaellige Kreaturen erzeugen und Typen zaehlen:");
+            CreatureBase[] arrayOfCreatures = [
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+                CreateRandomCreature(),
+            ];
+
+            var humanCount = CountCreatureType(typeof(Human), arrayOfCreatures);
+            var birdCount = CountCreatureType(typeof(Bird), arrayOfCreatures);
+            var bunnyCount = CountCreatureType(typeof(Bunny), arrayOfCreatures);
+
+            Console.WriteLine($"Es wurden {humanCount} 🥱 erzeugt.");
+            Console.WriteLine($"Es wurden {birdCount} 🦜 erzeugt.");
+            Console.WriteLine($"Es wurden {bunnyCount} 🐰 erzeugt.");
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
+
+        private static int CountCreatureType(Type targetType, CreatureBase[] arrayOfCreatures)
+        {
+            int count = 0;
+
+            foreach (var creature in arrayOfCreatures)
+            {
+                Type creatureType = creature.GetType();
+                if (creatureType == targetType)
+                {
+                    count++;
+                }
+
+                //Console.WriteLine($"{creatureType.Name}: {creature.GetName()}");
+            }
+
+            return count;
         }
 
         private static void RunApplication()
@@ -59,6 +103,19 @@ namespace OOP_Poly
                 default:
                     return null;
             }
+        }
+
+        private static CreatureBase CreateRandomCreature()
+        {
+            // Zufallszahl zwischen 1 und 3
+            int type = Random.Shared.Next(1, 4);
+            var result = CreateCreatureInstance(type);
+            if (result == null)
+            {
+                return CreateRandomCreature();
+            }
+
+            return result;
         }
 
         private static void CheckForHumanCreatureToDoSomeWork(CreatureBase creature)
