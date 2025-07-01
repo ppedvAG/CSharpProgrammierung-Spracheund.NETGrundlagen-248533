@@ -46,38 +46,36 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M06 | OOP - NAMESPACES, KLASSEN, FELDER und KAPSELUNGEN
 
--	[ ]  Namespaces
--	[ ]  Klassen
--	[ ]  Felder
--	[ ]  Eigenschaften
--	[ ]  Kapselungen
--	[ ]  Konstruktoren
--	[ ]  Objekte
+-	[x]  Namespaces
+-	[x]  Klassen
+-	[x]  Felder
+-	[x]  Eigenschaften
+-	[x]  Kapselungen
+-	[x]  Konstruktoren
+-	[x]  Objekte und null
 
 ## M07 | OOP - GARBAGE COLLECTION, STATISCHE MEMBER, WERTE und REFERENZEN
 
--	[ ]  Destruktor
--	[ ]  Garbage Collection
--	[ ]  Statische Member
--	[ ]  Werte- und Referenztypen
--	[ ]  ref
+~~-	[ ]  Destruktor~~
+~~-	[ ]  Garbage Collection~~
+-	[x]  Statische Member
+-	[x]  Werte- und Referenztypen
+~~-	[ ]  ref~~
 -	[ ]  using und IDisposable
 
 ## M08 | OOP - VERERBUNG und ZUGRIFFSMODIFIER
 
--	[ ]  Vererbung
--	[ ]  base
--	[ ]  virtuelle Member
--	[ ]  Überschreibungen verhindern
--	[ ]  Zugriffsmodifier
+-	[x]  Vererbung
+-	[x]  base
+-	[x]  virtuelle Member
+-	[x]  Zugriffsmodifier
 
 ## M09 | OOP - POLYMORPHISMUS und TYPEN
 
--	[ ]  **Polymorphismus**
--	[ ]  Typtest "GetType()" & "typeof"
--	[ ]  Typtest "is"
-- 	[ ]	 Member ausblenden (nicht so wichtig und nicht empfohlen)
--	[ ]  **abstrakte Member und Klassen**
+-	[x]  **Polymorphismus**
+-	[x]  **abstrakte Member und Klassen**
+-	[x]  Typtest "GetType()" & "typeof"
+-	[x]  Typtest "is"
 
 ## M10 | OOP - INTERFACES
  
