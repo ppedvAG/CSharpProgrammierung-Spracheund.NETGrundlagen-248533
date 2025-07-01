@@ -22,6 +22,19 @@ namespace OOP
             // Statische Methoden werden so aufgerufen
             Creature.ShowNumberOfCreatures();
 
+            // Reference Type: Adresse zum Objekt im Speicher ist null, da es nicht existiert
+            Creature undefined = null;
+
+            // Es fliegt eine Ausnahme, also Programmfehler und es stuerzt ab.
+            // Es handelt sich um eine sog. NullReferenceException
+            //undefined.Talk();
+
+            // Um das zu beheben, muessen wir auf null pruefen
+            if (undefined != null)
+            {
+                undefined.Talk();
+            }
+
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
