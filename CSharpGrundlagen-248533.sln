@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greeter", "Greeter\Greeter.csproj", "{8ADB3B23-E2EF-43C1-9083-25AB3F4E482B}"
 EndProject
@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M001_Greeter", "M001_Greete
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M000_Intro", "M000_Intro", "{FD2C49DB-61F3-454B-A589-E3C56D5C6F5E}"
 	ProjectSection(SolutionItems) = preProject
+		GLOSSAR.md = GLOSSAR.md
 		README.md = README.md
 	EndProjectSection
 EndProject

@@ -67,6 +67,8 @@
             case CalcOperation.Multiplikation:
                 return x * y;
             case CalcOperation.Division:
+                // Trinaerer Operator: Kurzform fuer if/else
+                // retrun Bedingung ? Wahr-Fall : Falsch-Fall
                 return y != 0 ? x / y : double.NaN;
             default:
                 return double.NaN;

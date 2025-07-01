@@ -5,6 +5,10 @@
 int number = 20;
 string name = "Max";
 
+// Konstanten
+const double PI = 3.1415;
+//PI = 23; // Wird von Compiler nicht erlaubt
+
 int age; // Deklaration
 age = 20; // Zuweisung
 
