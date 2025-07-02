@@ -86,11 +86,11 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M11 | GENERISCHE LISTEN
 
--	[ ]  Generische Datentypen
--	[ ]  List<T>
+-	[x]  Generische Datentypen
+-	[x]  List<T>
 - 	[ ]  Stack<T>
 - 	[ ]  Queue<T>
--	[ ]  Dictionary<T1, T2>
+-	[x]  Dictionary<T1, T2>
 
 ## M12 | FEHLERBEHANDLUNG und UNIT-TESTS
 
@@ -102,14 +102,16 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M13 | DATEIEN und VERZEICHNISSE
 
--	[ ]  Dateien lesen/schreiben
--	[ ]  JSON
-- 	[ ]	 XML
+-	[x]  Dateien lesen/schreiben
+-	[x]  JSON
+- 	[x]	 XML
+- 	[x]	 CSV
 
 ## M14 | GUI
 
--	[ ]  WPF Formular gestalten
--   [ ] Datenbindung
+-	[x]  Win Forms Formular gestalten
+-	[x]  WPF Formular gestalten
+-   [x]  Datenbindung
 
 ## M15 | SONSTIGES
 
