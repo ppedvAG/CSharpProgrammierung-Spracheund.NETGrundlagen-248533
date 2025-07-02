@@ -1,0 +1,30 @@
+﻿<Window x:Class="FahrzeugWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FahrzeugWPF"
+        mc:Ignorable="d"
+        Title="Fahrzeugmanagement" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <Button x:Name="btnAddFahrzeug" Click="btnAddFahrzeug_Click">Fahrzeug hinzufügen</Button>
+            <Button x:Name="btnDeleteFahrzeug" Click="btnDeleteFahrzeug_Click">Fahrzeug entfernen</Button>
+            <Label>Preis</Label>
+            <TextBlock x:Name="txtPreis"></TextBlock>
+        </StackPanel>
+        <ListBox x:Name="lstFahrzeuge" ItemsSource="{Binding Fahrzeuge}" SelectionChanged="lstFahrzeuge_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" Margin="0,0,10,0"></TextBlock>
+                        <TextBlock Text="{Binding MaxGeschwindigkeit}" Margin="0,0,4,0"></TextBlock>
+                        <TextBlock Margin="0,0,10,0">km/h</TextBlock>
+                        <TextBlock Text="{Binding Preis}" Margin="0,0,4,0"></TextBlock>
+                        <TextBlock Margin="0,0,10,0">Euro</TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Window>
