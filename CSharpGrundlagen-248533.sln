@@ -67,6 +67,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab12_TermCalc", "Lab12_TermCalc\Lab12_TermCalc.csproj", "{CFD96BCB-CAA0-460E-8B65-229338B18669}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M013_Serilisation", "M013_Serilisation", "{31330024-A555-4368-A6EC-823A1EE46426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilisation", "Serilisation\Serilisation.csproj", "{296DB55A-547F-4C0C-AC07-6E8D0FE0F83A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +153,10 @@ Global
 		{CFD96BCB-CAA0-460E-8B65-229338B18669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD96BCB-CAA0-460E-8B65-229338B18669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD96BCB-CAA0-460E-8B65-229338B18669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296DB55A-547F-4C0C-AC07-6E8D0FE0F83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296DB55A-547F-4C0C-AC07-6E8D0FE0F83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296DB55A-547F-4C0C-AC07-6E8D0FE0F83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296DB55A-547F-4C0C-AC07-6E8D0FE0F83A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,6 +181,7 @@ Global
 		{7A5CCB6E-924A-429A-A04E-04C76E138FA5} = {D702410D-E5FC-442A-B7B0-7129E6BBCC80}
 		{948202B2-B9AD-4B02-AAA6-98AE291F175C} = {FB24E0E8-E0B7-4D0F-BEE9-0E850A11FC40}
 		{CFD96BCB-CAA0-460E-8B65-229338B18669} = {FB24E0E8-E0B7-4D0F-BEE9-0E850A11FC40}
+		{296DB55A-547F-4C0C-AC07-6E8D0FE0F83A} = {31330024-A555-4368-A6EC-823A1EE46426}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4F81670-3076-48F8-A356-A3B70D3DC1DF}

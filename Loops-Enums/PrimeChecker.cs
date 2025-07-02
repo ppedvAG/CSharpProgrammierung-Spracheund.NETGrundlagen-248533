@@ -1,6 +1,6 @@
 ﻿public class PrimeChecker
 {
-    internal static void Main(string[] args)
+    internal static void _Main(string[] args)
     {
         while (true)
         {

@@ -100,19 +100,16 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 -	[ ]  Assert References
 -	[ ]  UnitTests DataRow
 
-## M13 | DELEGATES und EVENTS
-
--	[ ]  Delegates
--	[ ]  Action
--	[ ]  Func
--	[ ]  anonyme Methoden
--	[ ]  EventHandler
-
-## M14 | DATEIEN und VERZEICHNISSE
+## M13 | DATEIEN und VERZEICHNISSE
 
 -	[ ]  Dateien lesen/schreiben
 -	[ ]  JSON
 - 	[ ]	 XML
+
+## M14 | GUI
+
+-	[ ]  WPF Formular gestalten
+-   [ ] Datenbindung
 
 ## M15 | SONSTIGES
 
