@@ -79,8 +79,8 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M10 | OOP - INTERFACES
  
--	[ ] Interfaces
--	[ ] Interface-Implementierungen
+-	[x] Interfaces
+-	[x] Interface-Implementierungen
 
 `Tipp: Entwurfsmuster anschauen um Umgang mit Softwarearchitektur zu erlernen.`
 
@@ -94,8 +94,8 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M12 | FEHLERBEHANDLUNG und UNIT-TESTS
 
--	[ ]  try-catch
--	[ ]  eigene Exceptions
+-	[x]  try-catch
+-	[x]  eigene Exceptions
 -	[ ]  UnitTests mit AAA-Pattern
 -	[ ]  Assert References
 -	[ ]  UnitTests DataRow
