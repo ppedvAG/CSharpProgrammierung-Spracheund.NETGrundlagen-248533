@@ -82,6 +82,8 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 -	[ ] Interfaces
 -	[ ] Interface-Implementierungen
 
+`Tipp: Entwurfsmuster anschauen um Umgang mit Softwarearchitektur zu erlernen.`
+
 ## M11 | GENERISCHE LISTEN
 
 -	[ ]  Generische Datentypen

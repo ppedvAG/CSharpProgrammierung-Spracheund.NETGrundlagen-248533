@@ -2,7 +2,7 @@
 
 ---
 
-## Grundlagen
+## Grundlagen Programmieren
 
 
 | Begriff				| Beschreibung							|
@@ -22,3 +22,25 @@
 | Konvertierung/Parsen	| Umwandlung von Komplexen Typen in andere Typen |
 | Funktionen			| Sind eigenständige Codeblöcke, die eine bestimmte Aufgabe ausführen und von beliebigen Stellen im Programm aufgerufen werden können. Sie helfen dabei, Code zu **organisieren** und wiederzuverwenden. |
 
+
+## Grundlagen OOP
+
+| Begriff				| Code-Snippet				    | Beschreibung							|
+| --------------------- | ----------------------------- | ------------------------------------- |
+| Klassen				| `class Person { }`			| Sind Baupläne für Objekte und kapseln Logik. Sie enthalten Variablen und Funktionen. |
+| Instanz / Objekt		| `Person max = new Person();`	| Ein konkretes Erzeugnis des Bauplans einer Klasse, welche zur Laufzeit im Speicher zu finden ist. |
+| Mitglieder / Members	| `class Person { /* Alles hier drin */ }`		| Alle Mitglieder einer Klasse, also Felder, Eigenschaften, Methoden. |
+| Felder / Fields		| `private int age = 42;`		| Variablen innerhalb einer Klasse.		|
+| Methoden				| `public void SayHello();`		| Funktionen innerhalb einer Klasse.	|
+| Konstruktor			| `public Person(int age) { }`	| Spezielle Methode ohne Rückgabewert, welche einmalig bei der **Erzeugung** einer Instanz aufgerufen wird. |
+| Default-Konstruktor	| `public Person() { }`			| Parameterloser Konstruktor, der auch vorhanden ist, wenn kein Konstruktor in der Klasse definiert wurde. |
+| Eigenschaften			| `public Name { get; set; }`	| Methoden-Paar aus get und set, welches ein sog. "backingfield" setzt und ließt. |
+| Backingfield			| `private int age = 42;`		| Ein Feld, welches nach außen hin durch eine Eigenschaft zugänglich gemacht wird. (i.d.R. implizit durch .NET) |
+| Vererbung				| `class Koch : Person { }`		| Spezialisierung einer (Basis-)Klasse.	|
+| Zugriffsmodifizierer	| `public, protected, private, internal`	| Keywords welche die Sichtbarkeit der Members (Felder, Methoden, usw.) bestimmt. |
+| static				| `static string dings;`		| Modifier, welche Members instanzübergreifend verfügbar macht. Es wird nur **einmalig** Speicher reserviert. |
+| readonly				| `readonly int[] numbers = [];` | Lässt keine nachträgliche Modifikation eines Feldes zu, d. h. Wert kann nicht neu gesetzt werden. |
+| const					| `const float PI = 3.14159`	| Kombination aus `static` und `readonly` ist. |
+| Abstrakte Klasse		| `abstract class Base { }`		| Modifier auf Klassenebene verhindert es die Instanzerzeugung von Objekten. |
+| Abstrakte Methode		| `abstract void SayHello();` 	| Modifier für Methoden erzwingt, dass abgeleitete Klassen diese implementieren müssen. |
+| Interfaces			| `interface IWorker {}`		| Kann wie eine exklusive `abstract class` gesehen werden und ist ein *Vertrag*, was eine Klasse können muss, jedoch nicht wie sie es umsetzt. |

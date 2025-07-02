@@ -9,9 +9,9 @@ namespace OOP_Poly
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             // Geht nicht, da die Basisklasse abstrakt ist
-            //var bunny = new CreatureBase("Bunny", 3); 
+            //var bunny = new CreatureBase("Bunny", 3);
 
-            //RunApplication();
+            RunApplication();
 
             Console.WriteLine("\n10 Zufaellige Kreaturen erzeugen und Typen zaehlen:");
             CreatureBase[] arrayOfCreatures = [
