@@ -20,7 +20,11 @@ namespace Lab12_TermCalc.Logik
             try
             {
                 Term term = new Term(input);
-                return Execute(term);
+                return Execute(term.ParseEingabe());
+            }
+            catch (InvalidOperationException ex)
+            {
+                error = $"{ex.Message}:\n{input}";
             }
             catch (FormatException)
             {

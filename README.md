@@ -96,9 +96,9 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 -	[x]  try-catch
 -	[x]  eigene Exceptions
--	[ ]  UnitTests mit AAA-Pattern
--	[ ]  Assert References
--	[ ]  UnitTests DataRow
+-	[x]  UnitTests mit AAA-Pattern
+-	[x]  Assert References
+-	[x]  UnitTests DataRow
 
 ## M13 | DATEIEN und VERZEICHNISSE
 

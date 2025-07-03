@@ -7,14 +7,18 @@ namespace Lab12_TermCalc.Logik
         public string Eingabe { get; set; }
         public int Zahl1 { get; set; }
         public int Zahl2 { get; set; }
-        public Rechenoperation Operation { get; set; }
+        public Rechenoperation Operation => GetRechenoperation();
 
+        // Konstruktoren sollten keine Logik enthalten, sondern nur die Initialisierung
+        // sog. Code-Smell (https://de.wikipedia.org/wiki/Code-Smell)
         public Term(string term)
         {
             Eingabe = term;
-            Operation = GetRechenoperation();
+        }
 
-
+        // Method-Chaining: Wir geben unsere eigene Instanz zurueck, um Anweisungen verketten koennen
+        public Term ParseEingabe()
+        {
             //SplitTerm kann Null zurückgeben (führt bei Zugriff auf Array in nächster Zeile zu NullReferenceException)
             string[] zahlen = SplitTerm();
 
@@ -25,23 +29,29 @@ namespace Lab12_TermCalc.Logik
                 Zahl1 = int.TryParse(zahlen[0].Trim(), out var zahl1) ? zahl1 : 0;
                 Zahl2 = int.TryParse(zahlen[1].Trim(), out var zahl2) ? zahl2 : 0;
             }
+
+            return this;
         }
 
-        private Rechenoperation GetRechenoperation()
+        public Rechenoperation GetRechenoperation()
         {
-            if (Eingabe.Contains('+'))
-                return Rechenoperation.Addition;
-            else if (Eingabe.Contains('-'))
-                return Rechenoperation.Subtraktion;
-            else if (Eingabe.Contains('*'))
-                return Rechenoperation.Multiplikation;
-            else if (Eingabe.Contains('/'))
-                return Rechenoperation.Division;
-            else
-                return 0;
+            if (!string.IsNullOrEmpty(Eingabe))
+            {
+                if (Eingabe.Contains('+'))
+                    return Rechenoperation.Addition;
+                else if (Eingabe.Contains('-'))
+                    return Rechenoperation.Subtraktion;
+                else if (Eingabe.Contains('*'))
+                    return Rechenoperation.Multiplikation;
+                else if (Eingabe.Contains('/'))
+                    return Rechenoperation.Division;
+            }
+
+            // Besser eine InvalidOperationException werfen
+            throw new InvalidOperationException("Operator unbekannt!");
         }
 
-        private string[] SplitTerm()
+        public string[] SplitTerm()
         {
             switch (Operation)
             {
