@@ -5,21 +5,22 @@ namespace QuizGame
 {
     public class Program
     {
-        static int score = 0;
+        private const string HighScoreFilePath = "highscore.json";
+        private static readonly string QuestionFilePath = Path.Combine("Data", "questions.json");
 
         // Highlander Prinzip: Es kann nur eine Main-Methode (fuer den Einstieg) geben
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie lautet dein Name?");
-            string? name = Console.ReadLine();
-            if (string.IsNullOrEmpty(name))
+            var highscore = new HighScore(ReadJsonFile<User>(HighScoreFilePath));
+
+            var currentUser = new User
             {
-                name = "Gast";
-            }
+                Name = GetUserName()
+            };
 
-            Console.WriteLine($"Hallo, {name}!");
+            currentUser.ShowGreeting();
 
-            QuizItem[] quizItems = ReadJsonFile<QuizItem>(Path.Combine("Data", "questions.json"));
+            QuizItem[] quizItems = ReadJsonFile<QuizItem>(QuestionFilePath);
 
             // Zu Testzwecken verwenden wir nur die ersten 3 Fragen
             // Precompiler Anweisung: Wenn wir uns im DEBUG Modus befinden
@@ -32,23 +33,42 @@ namespace QuizGame
                 bool correct = item.AskQuestion();
                 if (correct)
                 {
-                    score++;
+                    currentUser.IncrementScore();
                 }
             }
 
-            Console.WriteLine($"Du hast {score} Punkte erreicht.");
+            currentUser.ShowScore();
+
+            highscore.Add(currentUser);
+            highscore.Show();
+            WriteJsonFile(HighScoreFilePath, highscore.Entries);
 
             Console.WriteLine("Beliebige Taste zum Beenden druecken...");
             Console.ReadKey();
         }
 
+        private static string GetUserName()
+        {
+            Console.WriteLine("Wie lautet dein Name?");
+            string? name = Console.ReadLine();
+            if (string.IsNullOrEmpty(name))
+            {
+                name = "Gast";
+            }
+
+            return name;
+        }
+
         private static T[] ReadJsonFile<T>(string filePath)
         {
-            var json = File.ReadAllText(filePath);
-            var result = JsonSerializer.Deserialize<T[]>(json);
-            if (result != null)
+            if (File.Exists(filePath))
             {
-                return result;
+                var json = File.ReadAllText(filePath);
+                var result = JsonSerializer.Deserialize<T[]>(json);
+                if (result != null)
+                {
+                    return result;
+                }
             }
 
             // default gibt den Standartwert des Object-Typs zurueck
@@ -57,6 +77,16 @@ namespace QuizGame
 
             // Besser ist es aber ein leeres Array zurueck zu geben
             return [];
+        }
+
+        private static void WriteJsonFile(string filePath, List<User> entries)
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            var json = JsonSerializer.Serialize(entries, options);
+            File.WriteAllText(filePath, json);
         }
     }
 }
