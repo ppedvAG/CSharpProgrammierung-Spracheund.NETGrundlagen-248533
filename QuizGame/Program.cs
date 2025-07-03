@@ -16,21 +16,8 @@
 
             Console.WriteLine($"Hallo, {name}!");
 
-            Console.WriteLine("Was ist die Hauptstadt von Deutschland?");
-            string? antwort = Console.ReadLine();
-            if (antwort == "Berlin")
-            {
-                // Punktzahl um 1 erhoehen
-                score++;
-            }
-
-            Console.WriteLine("Wie viele Beine hat eine Spinne?");
-            antwort = Console.ReadLine();
-            if (antwort == "8")
-            {
-                score++;
-            }
-
+            AskQuestion("Was ist die Hauptstadt von Deutschland?", "Berlin");
+            AskQuestion("Wie viele Beine hat eine Spinne?", "8");
 
             Console.WriteLine($"Du hast {score} Punkte erreicht.");
 
@@ -38,6 +25,28 @@
 
             Console.WriteLine("Beliebige Taste zum Beenden druecken...");
             Console.ReadKey();
+        }
+
+        private static string? AskQuestion(string question, string expected)
+        {
+            Console.WriteLine(question);
+            string? antwort = Console.ReadLine();
+            // Es kann eine NullReferenceException auftreten, weswegen wir einen Null-Check durchfuehren
+            // Equals von der Klasse string hat Ueberladungen, die nuetzlich sind
+            // InvariantCulture: Unabhaengigkeit von der eingestellten Sprache des Betriebsystems
+            // IgnoreCase: Groß- und Kleinschreibung wird ignoriert
+            if (antwort is not null && antwort.Equals(expected, StringComparison.InvariantCultureIgnoreCase))
+            {
+                Console.WriteLine("Richtig!");
+                // Punktzahl um 1 erhoehen
+                score++;
+            }
+            else
+            {
+                Console.WriteLine("Leider falsch.");
+            }
+
+            return antwort;
         }
     }
 }
