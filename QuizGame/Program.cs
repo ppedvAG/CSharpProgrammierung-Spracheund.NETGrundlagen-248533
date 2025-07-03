@@ -1,6 +1,7 @@
 ﻿using QuizGame.Enums;
 using QuizGame.Models;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace QuizGame
 {
@@ -21,26 +22,27 @@ namespace QuizGame
 
             currentUser.ShowGreeting();
 
-            var difficulty = SelectDifficulty();
+            IEnumerable<QuizItem> quizItems = ReadJsonFile<QuizItem>(QuestionFilePath);
 
-            QuizItem[] quizItems = ReadJsonFile<QuizItem>(QuestionFilePath);
+            var difficulty = SelectDifficulty();
+            if (difficulty != null)
+            {
+                quizItems = quizItems.Where(x => x.Difficulty == difficulty);
+            }
 
             // Zu Testzwecken verwenden wir nur die ersten 3 Fragen
             // Precompiler Anweisung: Wenn wir uns im DEBUG Modus befinden
 #if DEBUG
-            quizItems = quizItems.Take(3).ToArray();
+            quizItems = quizItems.Take(3);
 #endif
             // Wir verwenden Linq um die Fragen nach Schwierigkeitsgrad zu filtern
-            foreach (QuizItem item in quizItems.Where(x => x.Difficulty == difficulty.ToString()))
+            foreach (QuizItem item in quizItems)
             {
                 // Alternative waere eine if-Abfrage fuer die Schwierigkeit zu schreiben
                 // if (item.Difficulty == difficulty.ToString())
 
-                bool correct = item.AskQuestion();
-                if (correct)
-                {
-                    currentUser.IncrementScore();
-                }
+                var points = item.AskQuestion();
+                currentUser.IncrementScore(points);
             }
 
             currentUser.ShowScore();
@@ -65,7 +67,7 @@ namespace QuizGame
             return name;
         }
 
-        private static Difficulty SelectDifficulty()
+        private static Difficulty? SelectDifficulty()
         {
             Console.WriteLine("\nBitte waehle eine Schwierigkeit:");
 
@@ -80,15 +82,23 @@ namespace QuizGame
                 Console.WriteLine($"Du hast die Schwierigkeit {Enum.GetName(typeof(Difficulty), selection)} gewaehlt.");
                 return (Difficulty)selection;
             }
-            return Difficulty.Medium;
+
+            Console.WriteLine("Alle Fragen werden gewaehlt.");
+            return null;
         }
 
         private static T[] ReadJsonFile<T>(string filePath)
         {
             if (File.Exists(filePath))
             {
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                    Converters = { new JsonStringEnumConverter() }
+                };
+
                 var json = File.ReadAllText(filePath);
-                var result = JsonSerializer.Deserialize<T[]>(json);
+                var result = JsonSerializer.Deserialize<T[]>(json, options);
                 if (result != null)
                 {
                     return result;

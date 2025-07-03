@@ -6,9 +6,9 @@
 
         public int Score { get; set; }
 
-        public void IncrementScore()
+        public void IncrementScore(int points)
         {
-            Score++;
+            Score += points;
         }
 
         public void ShowGreeting()

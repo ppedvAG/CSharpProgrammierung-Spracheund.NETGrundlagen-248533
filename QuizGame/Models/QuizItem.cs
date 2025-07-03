@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using QuizGame.Enums;
+using System.Diagnostics;
 
 namespace QuizGame.Models
 {
@@ -16,24 +17,34 @@ namespace QuizGame.Models
 
         public string ExpectedAnswer { get; set; }
 
-        public string Difficulty { get; set; }
+        public Difficulty Difficulty { get; set; }
 
         public string Hint { get; set; }
 
         #endregion
 
-        public bool AskQuestion()
+        public int AskQuestion()
+        {
+            PrintQuestion();
+
+            return ReadAnswer();
+        }
+
+        private void PrintQuestion()
         {
             // Leerzeile hinzufuegen
             Console.WriteLine();
             Console.WriteLine(Question);
+            Console.WriteLine($"\t(0)\tfür einen Hinweis (Punktabzug)\n");
 
-            // Mehrere Antworten moeglich
             for (int i = 0; i < Options.Length; i++)
             {
                 Console.WriteLine($"\t({i + 1})\t{Options[i]}");
             }
+        }
 
+        private int ReadAnswer()
+        {
             string? input = Console.ReadLine();
 
             // Werte konvertieren bzw. parsen
@@ -43,31 +54,34 @@ namespace QuizGame.Models
                 int index = number - 1;
                 if (index >= 0 && index < Options.Length)
                 {
-                    string antwort = Options[index];
-
-                    // Es kann eine NullReferenceException auftreten, weswegen wir einen Null-Check durchfuehren
-                    // Equals von der Klasse string hat Ueberladungen, die nuetzlich sind
-                    // InvariantCulture: Unabhaengigkeit von der eingestellten Sprache des Betriebsystems
-                    // IgnoreCase: Groß- und Kleinschreibung wird ignoriert
-                    if (antwort is not null && antwort.Equals(ExpectedAnswer, StringComparison.InvariantCultureIgnoreCase))
+                    string answer = Options[index];
+                    if (answer.Equals(ExpectedAnswer, StringComparison.InvariantCultureIgnoreCase))
                     {
                         Console.WriteLine("Richtig!");
-                        return true;
+                        return GetPoints();
                     }
 
-                    Console.WriteLine("Leider falsch.");
+                    index = Options.ToList().IndexOf(ExpectedAnswer) + 1;
+                    Console.WriteLine($"Leider falsch. Richtige Antwort: ({index}).");
+                    return 0;
                 }
                 else
                 {
-                    Console.WriteLine("Diese Option steht nicht zur Verfügung!");
+                    Console.WriteLine("Hinweis: " + Hint);
+                    return ReadAnswer() / 2;
                 }
             }
-            else
-            {
-                Console.WriteLine("Ungültige Eingabe!");
-            }
 
-            return false;
+            Console.WriteLine("Ungültige Eingabe! Nochmal versuchen:");
+            return ReadAnswer();
         }
+
+        private int GetPoints() => Difficulty switch
+        {
+            Difficulty.Easy => 2,
+            Difficulty.Medium => 4,
+            Difficulty.Hard => 8,
+            _ => 0,
+        };
     }
 }
