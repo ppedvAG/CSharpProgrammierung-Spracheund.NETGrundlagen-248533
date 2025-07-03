@@ -44,3 +44,7 @@
 | Abstrakte Klasse		| `abstract class Base { }`		| Modifier auf Klassenebene verhindert es die Instanzerzeugung von Objekten. |
 | Abstrakte Methode		| `abstract void SayHello();` 	| Modifier für Methoden erzwingt, dass abgeleitete Klassen diese implementieren müssen. |
 | Interfaces			| `interface IWorker {}`		| Kann wie eine exklusive `abstract class` gesehen werden und ist ein *Vertrag*, was eine Klasse können muss, jedoch nicht wie sie es umsetzt. |
+| Generics				| `var list = new List<T>();`   | `T` steht für Typvariable. Typsicherheit wird zur Compile-Zeit gewährleistet. Dadurch wird der verwendete Typ für die Liste dynamisch. |
+| Exceptions			| `throw new Exception();`		| Unerwartete Ereignisse oder Fehler, die während der Laufzeit auftreten können und abgefangen werden sollten. |
+| try-catch				| `try { } catch(Exception) { }` | Hiermit können wir unerwartete Fehler abfangen. |
+| using-Block			| `using var stream = File.Open(...)` | Ein Sprachkonstrukt, was Ressourcen (Dateien, Streams, DB) nach Verwendung wieder freigibt. [Siehe auch IDisposable](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/dispose-pattern) |
