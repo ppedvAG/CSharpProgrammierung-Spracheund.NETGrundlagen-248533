@@ -1,6 +1,4 @@
-﻿using static System.Formats.Asn1.AsnWriter;
-
-namespace QuizGame.Models
+﻿namespace QuizGame.Models
 {
     public class QuizItem
     {

@@ -1,4 +1,5 @@
 ﻿using QuizGame.Models;
+using System.Text.Json;
 
 namespace QuizGame
 {
@@ -18,20 +19,13 @@ namespace QuizGame
 
             Console.WriteLine($"Hallo, {name}!");
 
-            QuizItem[] quizItems = [
-                new QuizItem
-                {
-                    Question = "Was ist die Hauptstadt von Deutschland?",
-                    ExpectedAnswer = "Berlin",
-                    Options = ["Wien", "Frankfurt", "Muenchen", "Berlin"]
-                },
-                new QuizItem 
-                {
-                    Question = "Wie viele Beine hat eine Spinne?",
-                    ExpectedAnswer = "8",
-                    Options = ["6", "8", "4", "12"]
-                }
-            ];
+            QuizItem[] quizItems = ReadJsonFile<QuizItem>(Path.Combine("Data", "questions.json"));
+
+            // Zu Testzwecken verwenden wir nur die ersten 3 Fragen
+            // Precompiler Anweisung: Wenn wir uns im DEBUG Modus befinden
+#if DEBUG
+            quizItems = quizItems.Take(3).ToArray();
+#endif
 
             foreach (QuizItem item in quizItems)
             {
@@ -46,6 +40,23 @@ namespace QuizGame
 
             Console.WriteLine("Beliebige Taste zum Beenden druecken...");
             Console.ReadKey();
+        }
+
+        private static T[] ReadJsonFile<T>(string filePath)
+        {
+            var json = File.ReadAllText(filePath);
+            var result = JsonSerializer.Deserialize<T[]>(json);
+            if (result != null)
+            {
+                return result;
+            }
+
+            // default gibt den Standartwert des Object-Typs zurueck
+            // int = 0, float = 0, bool = false, object = null (arrays, strings usw.)
+            //return default;
+
+            // Besser ist es aber ein leeres Array zurueck zu geben
+            return [];
         }
     }
 }
