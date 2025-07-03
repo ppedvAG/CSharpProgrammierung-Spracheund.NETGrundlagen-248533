@@ -1,0 +1,157 @@
+﻿[
+  {
+    "Question": "Welcher Datentyp eignet sich in C# für ganze Zahlen?",
+    "Options": [ "string", "int", "bool", "double" ],
+    "ExpectedAnswer": "int"
+  },
+  {
+    "Question": "Wie beginnt der Einstiegspunkt (Main-Methode) eines C#-Konsolenprogramms?",
+    "Options": [ "public static void Start()", "public void Main()", "public static void Main(string[] args)", "static main()" ],
+    "ExpectedAnswer": "public static void Main(string[] args)"
+  },
+  {
+    "Question": "Wie gibt man Text in der Konsole aus?",
+    "Options": [ "Console.WriteLine(\"Text\")", "System.Out.Print(\"Text\")", "print(\"Text\")", "echo(\"Text\")" ],
+    "ExpectedAnswer": "Console.WriteLine(\"Text\")"
+  },
+  {
+    "Question": "Was ist das Ergebnis von 5 / 2 in C# (beide Operanden vom Typ int)?",
+    "Options": [ "2.5", "2", "3", "5" ],
+    "ExpectedAnswer": "2"
+  },
+  {
+    "Question": "Wie deklariert man ein Array von Ganzzahlen mit 5 Elementen?",
+    "Options": [ "int array = new int[5];", "int[] array = new int[5];", "array int = new int(5);", "int array[5];" ],
+    "ExpectedAnswer": "int[] array = new int[5];"
+  },
+  {
+    "Question": "Was macht die folgende Anweisung? int x = Convert.ToInt32(\"42\");",
+    "Options": [ "Konvertiert die Zahl 42 in einen String", "Konvertiert den String \"42\" in eine Ganzzahl", "Gibt 42 auf der Konsole aus", "Erzeugt einen Fehler" ],
+    "ExpectedAnswer": "Konvertiert den String \"42\" in eine Ganzzahl"
+  },
+  {
+    "Question": "Wie wird eine Methode in C# definiert, die nichts zurückgibt?",
+    "Options": [ "void MeineMethode() {}", "function MeineMethode() {}", "def MeineMethode() {}", "null MeineMethode() {}" ],
+    "ExpectedAnswer": "void MeineMethode() {}"
+  },
+  {
+    "Question": "Wie kann man eine Schleife schreiben, die von 0 bis 4 zählt?",
+    "Options": [ "for (int i = 0; i < 5; i++)", "while (i < 5)", "repeat (i = 0; i < 5; i++)", "foreach (int i in 5)" ],
+    "ExpectedAnswer": "for (int i = 0; i < 5; i++)"
+  },
+  {
+    "Question": "Wie wird ein neues Objekt der Klasse 'Person' erzeugt?",
+    "Options": [ "Person person = new Person();", "Person person();", "new Person = person();", "Person = new person();" ],
+    "ExpectedAnswer": "Person person = new Person();"
+  },
+  {
+    "Question": "Wie kommentiert man eine einzelne Zeile in C#?",
+    "Options": [ "// Kommentar", "# Kommentar", "-- Kommentar", "/* Kommentar */" ],
+    "ExpectedAnswer": "// Kommentar"
+  },
+  {
+    "Question": "Wie lautet die korrekte Syntax für eine if-Bedingung?",
+    "Options": [ "if x == 5 then {}", "if (x == 5) {}", "if x = 5 {}", "if (x = 5) then {}" ],
+    "ExpectedAnswer": "if (x == 5) {}"
+  },
+  {
+    "Question": "Welcher Datentyp speichert Wahrheitswerte?",
+    "Options": [ "bool", "int", "string", "char" ],
+    "ExpectedAnswer": "bool"
+  },
+  {
+    "Question": "Wie kann man eine Zeichenkette in einen Integer umwandeln?",
+    "Options": [ "Convert.ToInt32()", "ToInt()", "ParseInt()", "StringToInt()" ],
+    "ExpectedAnswer": "Convert.ToInt32()"
+  },
+  {
+    "Question": "Wie kann man eine Methode mit Rückgabewert int deklarieren?",
+    "Options": [ "int MeineMethode() {}", "void MeineMethode() {}", "MeineMethode() int {}", "return MeineMethode() {}" ],
+    "ExpectedAnswer": "int MeineMethode() {}"
+  },
+  {
+    "Question": "Wie viele Elemente hat das Array: int[] arr = {1,2,3,4};?",
+    "Options": [ "3", "4", "5", "0" ],
+    "ExpectedAnswer": "4"
+  },
+  {
+    "Question": "Wie kann man eine while-Schleife schreiben, die läuft, solange x kleiner als 10 ist?",
+    "Options": [ "while (x < 10) {}", "for (x < 10) {}", "repeat while (x < 10) {}", "loop (x < 10) {}" ],
+    "ExpectedAnswer": "while (x < 10) {}"
+  },
+  {
+    "Question": "Wie nennt man das Konzept, wenn eine Klasse von einer anderen erbt?",
+    "Options": [ "Vererbung", "Kapselung", "Polymorphismus", "Abstraktion" ],
+    "ExpectedAnswer": "Vererbung"
+  },
+  {
+    "Question": "Wie kann man eine Variable deklarieren, die sich nach der Zuweisung nicht mehr ändern darf?",
+    "Options": [ "const", "readonly", "static", "final" ],
+    "ExpectedAnswer": "const"
+  },
+  {
+    "Question": "Wie kann man den Wert einer Variable um 1 erhöhen?",
+    "Options": [ "x++;", "x += 1;", "x = x + 1;", "Alle Antworten sind richtig" ],
+    "ExpectedAnswer": "Alle Antworten sind richtig"
+  },
+  {
+    "Question": "Wie kann man eine Methode mit einem Parameter vom Typ string deklarieren?",
+    "Options": [ "void Methode(string text) {}", "void Methode(text) {}", "void Methode(string) {}", "void Methode(str text) {}" ],
+    "ExpectedAnswer": "void Methode(string text) {}"
+  },
+  {
+    "Question": "Wie kann man einen Wert aus der Konsole einlesen?",
+    "Options": [ "Console.ReadLine()", "Console.Input()", "Read.Console()", "Input.Read()" ],
+    "ExpectedAnswer": "Console.ReadLine()"
+  },
+  {
+    "Question": "Wie kann man prüfen, ob zwei Variablen gleich sind?",
+    "Options": [ "x == y", "x = y", "x.Equals(y)", "Antwort 1 und 3 sind korrekt" ],
+    "ExpectedAnswer": "Antwort 1 und 3 sind korrekt"
+  },
+  {
+    "Question": "Wie kann man eine Klasse deklarieren?",
+    "Options": [ "class MeineKlasse {}", "MeineKlasse class {}", "define MeineKlasse {}", "class: MeineKlasse {}" ],
+    "ExpectedAnswer": "class MeineKlasse {}"
+  },
+  {
+    "Question": "Wie kann man eine Methode überladen?",
+    "Options": [ "Gleicher Name, unterschiedliche Parameter", "Gleicher Name, gleicher Rückgabetyp", "Unterschiedlicher Name, gleiche Parameter", "Gleicher Name, gleicher Parameter" ],
+    "ExpectedAnswer": "Gleicher Name, unterschiedliche Parameter"
+  },
+  {
+    "Question": "Wie kann man eine Variable deklarieren, die in der ganzen Klasse sichtbar ist?",
+    "Options": [ "Als Feld (z.B. private int x;)", "Als lokale Variable", "Als Parameter", "Als Konstante" ],
+    "ExpectedAnswer": "Als Feld (z.B. private int x;)"
+  },
+  {
+    "Question": "Wie kann man eine for-each-Schleife über ein Array schreiben?",
+    "Options": [ "foreach (int i in arr)", "for (int i = 0; i < arr.Length; i++)", "while (i < arr.Length)", "repeat (i in arr)" ],
+    "ExpectedAnswer": "foreach (int i in arr)"
+  },
+  {
+    "Question": "Wie kann man einen Konstruktor in einer Klasse definieren?",
+    "Options": [ "public MeineKlasse() {}", "void MeineKlasse() {}", "constructor MeineKlasse() {}", "MeineKlasse() void {}" ],
+    "ExpectedAnswer": "public MeineKlasse() {}"
+  },
+  {
+    "Question": "Wie gibt man den Wert einer Variablen in einen Text aus?",
+    "Options": [ "Console.WriteLine($\"Wert: {x}\")", "Console.WriteLine(\"Wert: \" + x)", "Console.WriteLine(string.Format(\"Wert: {0}\", x))", "Alle Antworten sind richtig" ],
+    "ExpectedAnswer": "Alle Antworten sind richtig"
+  },
+  {
+    "Question": "Wie kann man eine Methode als öffentlich deklarieren?",
+    "Options": [ "public void Methode() {}", "private void Methode() {}", "void Methode() {}", "open void Methode() {}" ],
+    "ExpectedAnswer": "public void Methode() {}"
+  },
+  {
+    "Question": "Wie kann man eine Zeichenkette in Großbuchstaben umwandeln?",
+    "Options": [ "text.ToUpper()", "ToUpper(text)", "text.upper()", "text.ToUpperCase()" ],
+    "ExpectedAnswer": "text.ToUpper()"
+  },
+  {
+    "Question": "Wie kann man eine Methode deklarieren, die einen bool-Wert zurückgibt?",
+    "Options": [ "bool IstGerade(int x) {}", "boolean IstGerade(int x) {}", "void IstGerade(int x) {}", "int IstGerade(int x) {}" ],
+    "ExpectedAnswer": "bool IstGerade(int x) {}"
+  }
+]
