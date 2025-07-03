@@ -115,9 +115,12 @@ Kurs Repository zu Kurs C# Programmierung - Sprache und .NET Grundlagen der pped
 
 ## M15 | SONSTIGES
 
--	[ ]  Extension Methods
--	[ ]  Linq und IEnumberable<T>
--	[ ]  DebuggerDisplay
--	[ ]  Rekursion vs. Iteration
+-	[x]  Extension Methods
+-	[x]  [Linq](https://learn.microsoft.com/en-us/dotnet/csharp/linq/) 
+-   [x]  IEnumberable<T> 
+	     Alles, was mit for iteriert werden kann, muss dieses Interface besitzen.
+	     D. h. gleichzeitig kann für Alle IEnumerables<T> auch Linq verwendet werden
+-	[x]  DebuggerDisplay
+-	[x]  Rekursion vs. Iteration
 
 ## M99 | SPECIAL: QUIZ GAME

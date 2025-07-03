@@ -1,4 +1,5 @@
-﻿using QuizGame.Models;
+﻿using QuizGame.Enums;
+using QuizGame.Models;
 using System.Text.Json;
 
 namespace QuizGame
@@ -20,6 +21,8 @@ namespace QuizGame
 
             currentUser.ShowGreeting();
 
+            var difficulty = SelectDifficulty();
+
             QuizItem[] quizItems = ReadJsonFile<QuizItem>(QuestionFilePath);
 
             // Zu Testzwecken verwenden wir nur die ersten 3 Fragen
@@ -27,9 +30,12 @@ namespace QuizGame
 #if DEBUG
             quizItems = quizItems.Take(3).ToArray();
 #endif
-
-            foreach (QuizItem item in quizItems)
+            // Wir verwenden Linq um die Fragen nach Schwierigkeitsgrad zu filtern
+            foreach (QuizItem item in quizItems.Where(x => x.Difficulty == difficulty.ToString()))
             {
+                // Alternative waere eine if-Abfrage fuer die Schwierigkeit zu schreiben
+                // if (item.Difficulty == difficulty.ToString())
+
                 bool correct = item.AskQuestion();
                 if (correct)
                 {
@@ -57,6 +63,24 @@ namespace QuizGame
             }
 
             return name;
+        }
+
+        private static Difficulty SelectDifficulty()
+        {
+            Console.WriteLine("\nBitte waehle eine Schwierigkeit:");
+
+            foreach (Difficulty difficulty in Enum.GetValues(typeof(Difficulty)))
+            {
+                Console.WriteLine($"{(int)difficulty}. {difficulty}");
+            }
+
+            if (int.TryParse(Console.ReadLine(), out int selection) 
+                && Enum.IsDefined(typeof(Difficulty), selection))
+            {
+                Console.WriteLine($"Du hast die Schwierigkeit {Enum.GetName(typeof(Difficulty), selection)} gewaehlt.");
+                return (Difficulty)selection;
+            }
+            return Difficulty.Medium;
         }
 
         private static T[] ReadJsonFile<T>(string filePath)

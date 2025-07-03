@@ -1,5 +1,10 @@
-﻿namespace QuizGame.Models
+﻿using System.Diagnostics;
+
+namespace QuizGame.Models
 {
+    // Im Debug-Modus wird im Tooltyp der Inhalt der Instanz angezeigt statt dem Typen
+    // Frueher hat man ToString() ueberladen, aber das ist "Bad Practice", weil es Auswirkung auf das Release hat
+    [DebuggerDisplay("{Question} [{Difficulty}] {ExpectedAnswer}")]
     public class QuizItem
     {
         #region Properties
@@ -10,6 +15,10 @@
         public string[] Options { get; set; } = [];
 
         public string ExpectedAnswer { get; set; }
+
+        public string Difficulty { get; set; }
+
+        public string Hint { get; set; }
 
         #endregion
 
