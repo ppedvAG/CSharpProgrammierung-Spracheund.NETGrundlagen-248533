@@ -2,156 +2,338 @@
   {
     "Question": "Welcher Datentyp eignet sich in C# für ganze Zahlen?",
     "Options": [ "string", "int", "bool", "double" ],
-    "ExpectedAnswer": "int"
+    "ExpectedAnswer": "int",
+    "Hint": "Überlege, welcher Typ keine Nachkommastellen speichert.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie beginnt der Einstiegspunkt (Main-Methode) eines C#-Konsolenprogramms?",
     "Options": [ "public static void Start()", "public void Main()", "public static void Main(string[] args)", "static main()" ],
-    "ExpectedAnswer": "public static void Main(string[] args)"
+    "ExpectedAnswer": "public static void Main(string[] args)",
+    "Hint": "Der Einstiegspunkt ist immer 'static' und nimmt ein string-Array als Parameter.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie gibt man Text in der Konsole aus?",
     "Options": [ "Console.WriteLine(\"Text\")", "System.Out.Print(\"Text\")", "print(\"Text\")", "echo(\"Text\")" ],
-    "ExpectedAnswer": "Console.WriteLine(\"Text\")"
+    "ExpectedAnswer": "Console.WriteLine(\"Text\")",
+    "Hint": "Die Methode stammt aus dem Namespace System.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Was ist das Ergebnis von 5 / 2 in C# (beide Operanden vom Typ int)?",
     "Options": [ "2.5", "2", "3", "5" ],
-    "ExpectedAnswer": "2"
+    "ExpectedAnswer": "2",
+    "Hint": "Ganzzahlige Division schneidet Nachkommastellen ab.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie deklariert man ein Array von Ganzzahlen mit 5 Elementen?",
     "Options": [ "int array = new int[5];", "int[] array = new int[5];", "array int = new int(5);", "int array[5];" ],
-    "ExpectedAnswer": "int[] array = new int[5];"
+    "ExpectedAnswer": "int[] array = new int[5];",
+    "Hint": "Arrays werden mit eckigen Klammern deklariert.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Was macht die folgende Anweisung? int x = Convert.ToInt32(\"42\");",
     "Options": [ "Konvertiert die Zahl 42 in einen String", "Konvertiert den String \"42\" in eine Ganzzahl", "Gibt 42 auf der Konsole aus", "Erzeugt einen Fehler" ],
-    "ExpectedAnswer": "Konvertiert den String \"42\" in eine Ganzzahl"
+    "ExpectedAnswer": "Konvertiert den String \"42\" in eine Ganzzahl",
+    "Hint": "Achte auf die Richtung der Konvertierung.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie wird eine Methode in C# definiert, die nichts zurückgibt?",
     "Options": [ "void MeineMethode() {}", "function MeineMethode() {}", "def MeineMethode() {}", "null MeineMethode() {}" ],
-    "ExpectedAnswer": "void MeineMethode() {}"
+    "ExpectedAnswer": "void MeineMethode() {}",
+    "Hint": "Der Rückgabetyp für 'nichts' ist 'void'.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine Schleife schreiben, die von 0 bis 4 zählt?",
     "Options": [ "for (int i = 0; i < 5; i++)", "while (i < 5)", "repeat (i = 0; i < 5; i++)", "foreach (int i in 5)" ],
-    "ExpectedAnswer": "for (int i = 0; i < 5; i++)"
+    "ExpectedAnswer": "for (int i = 0; i < 5; i++)",
+    "Hint": "Die klassische Zählschleife beginnt bei 0.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie wird ein neues Objekt der Klasse 'Person' erzeugt?",
     "Options": [ "Person person = new Person();", "Person person();", "new Person = person();", "Person = new person();" ],
-    "ExpectedAnswer": "Person person = new Person();"
+    "ExpectedAnswer": "Person person = new Person();",
+    "Hint": "Objekte werden mit dem new-Operator erzeugt.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kommentiert man eine einzelne Zeile in C#?",
     "Options": [ "// Kommentar", "# Kommentar", "-- Kommentar", "/* Kommentar */" ],
-    "ExpectedAnswer": "// Kommentar"
+    "ExpectedAnswer": "// Kommentar",
+    "Hint": "Einzeilige Kommentare beginnen mit zwei Schrägstrichen.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie lautet die korrekte Syntax für eine if-Bedingung?",
     "Options": [ "if x == 5 then {}", "if (x == 5) {}", "if x = 5 {}", "if (x = 5) then {}" ],
-    "ExpectedAnswer": "if (x == 5) {}"
+    "ExpectedAnswer": "if (x == 5) {}",
+    "Hint": "Bedingungen stehen immer in runden Klammern.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Welcher Datentyp speichert Wahrheitswerte?",
     "Options": [ "bool", "int", "string", "char" ],
-    "ExpectedAnswer": "bool"
+    "ExpectedAnswer": "bool",
+    "Hint": "Nur ein Datentyp ist für true/false geeignet.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine Zeichenkette in einen Integer umwandeln?",
     "Options": [ "Convert.ToInt32()", "ToInt()", "ParseInt()", "StringToInt()" ],
-    "ExpectedAnswer": "Convert.ToInt32()"
+    "ExpectedAnswer": "Convert.ToInt32()",
+    "Hint": "Die Methode gehört zur Klasse Convert.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man eine Methode mit Rückgabewert int deklarieren?",
     "Options": [ "int MeineMethode() {}", "void MeineMethode() {}", "MeineMethode() int {}", "return MeineMethode() {}" ],
-    "ExpectedAnswer": "int MeineMethode() {}"
+    "ExpectedAnswer": "int MeineMethode() {}",
+    "Hint": "Der Rückgabetyp steht ganz am Anfang.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie viele Elemente hat das Array: int[] arr = {1,2,3,4};?",
     "Options": [ "3", "4", "5", "0" ],
-    "ExpectedAnswer": "4"
+    "ExpectedAnswer": "4",
+    "Hint": "Zähle die Werte in den geschweiften Klammern.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine while-Schleife schreiben, die läuft, solange x kleiner als 10 ist?",
     "Options": [ "while (x < 10) {}", "for (x < 10) {}", "repeat while (x < 10) {}", "loop (x < 10) {}" ],
-    "ExpectedAnswer": "while (x < 10) {}"
+    "ExpectedAnswer": "while (x < 10) {}",
+    "Hint": "Die while-Schleife prüft die Bedingung in Klammern.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie nennt man das Konzept, wenn eine Klasse von einer anderen erbt?",
     "Options": [ "Vererbung", "Kapselung", "Polymorphismus", "Abstraktion" ],
-    "ExpectedAnswer": "Vererbung"
+    "ExpectedAnswer": "Vererbung",
+    "Hint": "Das Kind übernimmt Eigenschaften der Elternklasse.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man eine Variable deklarieren, die sich nach der Zuweisung nicht mehr ändern darf?",
     "Options": [ "const", "readonly", "static", "final" ],
-    "ExpectedAnswer": "const"
+    "ExpectedAnswer": "const",
+    "Hint": "Das Schlüsselwort beginnt mit 'c'.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man den Wert einer Variable um 1 erhöhen?",
     "Options": [ "x++;", "x += 1;", "x = x + 1;", "Alle Antworten sind richtig" ],
-    "ExpectedAnswer": "Alle Antworten sind richtig"
+    "ExpectedAnswer": "Alle Antworten sind richtig",
+    "Hint": "Es gibt mehrere Möglichkeiten für +1.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine Methode mit einem Parameter vom Typ string deklarieren?",
     "Options": [ "void Methode(string text) {}", "void Methode(text) {}", "void Methode(string) {}", "void Methode(str text) {}" ],
-    "ExpectedAnswer": "void Methode(string text) {}"
+    "ExpectedAnswer": "void Methode(string text) {}",
+    "Hint": "Der Typ steht vor dem Parameternamen.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man einen Wert aus der Konsole einlesen?",
     "Options": [ "Console.ReadLine()", "Console.Input()", "Read.Console()", "Input.Read()" ],
-    "ExpectedAnswer": "Console.ReadLine()"
+    "ExpectedAnswer": "Console.ReadLine()",
+    "Hint": "Die Methode liest eine ganze Zeile als String.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man prüfen, ob zwei Variablen gleich sind?",
     "Options": [ "x == y", "x = y", "x.Equals(y)", "Antwort 1 und 3 sind korrekt" ],
-    "ExpectedAnswer": "Antwort 1 und 3 sind korrekt"
+    "ExpectedAnswer": "Antwort 1 und 3 sind korrekt",
+    "Hint": "Vergleich geht mit == oder Equals().",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man eine Klasse deklarieren?",
     "Options": [ "class MeineKlasse {}", "MeineKlasse class {}", "define MeineKlasse {}", "class: MeineKlasse {}" ],
-    "ExpectedAnswer": "class MeineKlasse {}"
+    "ExpectedAnswer": "class MeineKlasse {}",
+    "Hint": "Das Schlüsselwort steht am Anfang.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine Methode überladen?",
     "Options": [ "Gleicher Name, unterschiedliche Parameter", "Gleicher Name, gleicher Rückgabetyp", "Unterschiedlicher Name, gleiche Parameter", "Gleicher Name, gleicher Parameter" ],
-    "ExpectedAnswer": "Gleicher Name, unterschiedliche Parameter"
+    "ExpectedAnswer": "Gleicher Name, unterschiedliche Parameter",
+    "Hint": "Nur die Parameterliste muss sich unterscheiden.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man eine Variable deklarieren, die in der ganzen Klasse sichtbar ist?",
     "Options": [ "Als Feld (z.B. private int x;)", "Als lokale Variable", "Als Parameter", "Als Konstante" ],
-    "ExpectedAnswer": "Als Feld (z.B. private int x;)"
+    "ExpectedAnswer": "Als Feld (z.B. private int x;)",
+    "Hint": "Felder werden außerhalb von Methoden deklariert.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man eine for-each-Schleife über ein Array schreiben?",
     "Options": [ "foreach (int i in arr)", "for (int i = 0; i < arr.Length; i++)", "while (i < arr.Length)", "repeat (i in arr)" ],
-    "ExpectedAnswer": "foreach (int i in arr)"
+    "ExpectedAnswer": "foreach (int i in arr)",
+    "Hint": "foreach ist für das Durchlaufen von Sammlungen.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man einen Konstruktor in einer Klasse definieren?",
     "Options": [ "public MeineKlasse() {}", "void MeineKlasse() {}", "constructor MeineKlasse() {}", "MeineKlasse() void {}" ],
-    "ExpectedAnswer": "public MeineKlasse() {}"
+    "ExpectedAnswer": "public MeineKlasse() {}",
+    "Hint": "Der Konstruktor hat keinen Rückgabetyp.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie gibt man den Wert einer Variablen in einen Text aus?",
     "Options": [ "Console.WriteLine($\"Wert: {x}\")", "Console.WriteLine(\"Wert: \" + x)", "Console.WriteLine(string.Format(\"Wert: {0}\", x))", "Alle Antworten sind richtig" ],
-    "ExpectedAnswer": "Alle Antworten sind richtig"
+    "ExpectedAnswer": "Alle Antworten sind richtig",
+    "Hint": "Alle Varianten sind in C# möglich.",
+    "Difficulty": "Medium"
   },
   {
     "Question": "Wie kann man eine Methode als öffentlich deklarieren?",
     "Options": [ "public void Methode() {}", "private void Methode() {}", "void Methode() {}", "open void Methode() {}" ],
-    "ExpectedAnswer": "public void Methode() {}"
+    "ExpectedAnswer": "public void Methode() {}",
+    "Hint": "Das Zugriffsmodifizierer-Schlüsselwort steht am Anfang.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine Zeichenkette in Großbuchstaben umwandeln?",
     "Options": [ "text.ToUpper()", "ToUpper(text)", "text.upper()", "text.ToUpperCase()" ],
-    "ExpectedAnswer": "text.ToUpper()"
+    "ExpectedAnswer": "text.ToUpper()",
+    "Hint": "Es ist eine Methode vom Typ string.",
+    "Difficulty": "Easy"
   },
   {
     "Question": "Wie kann man eine Methode deklarieren, die einen bool-Wert zurückgibt?",
     "Options": [ "bool IstGerade(int x) {}", "boolean IstGerade(int x) {}", "void IstGerade(int x) {}", "int IstGerade(int x) {}" ],
-    "ExpectedAnswer": "bool IstGerade(int x) {}"
+    "ExpectedAnswer": "bool IstGerade(int x) {}",
+    "Hint": "Der Rückgabetyp steht ganz vorne.",
+    "Difficulty": "Medium"
+  },
+  {
+    "Question": "Was ist der Unterschied zwischen 'ref' und 'out' Parametern in C#?",
+    "Options": [
+      "'ref' muss initialisiert sein, 'out' nicht",
+      "'out' muss initialisiert sein, 'ref' nicht",
+      "Beide müssen initialisiert sein",
+      "Beide dürfen nicht initialisiert sein"
+    ],
+    "ExpectedAnswer": "'ref' muss initialisiert sein, 'out' nicht",
+    "Hint": "'ref' verlangt einen Startwert, 'out' nicht.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Was bewirkt das Schlüsselwort 'sealed' bei einer Klasse?",
+    "Options": [
+      "Die Klasse kann nicht mehr erweitert werden",
+      "Die Klasse ist abstrakt",
+      "Die Klasse kann nicht instanziiert werden",
+      "Die Klasse ist nur innerhalb des Namespaces sichtbar"
+    ],
+    "ExpectedAnswer": "Die Klasse kann nicht mehr erweitert werden",
+    "Hint": "Mit 'sealed' wird die Vererbung unterbunden.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Was passiert, wenn in einer Methode eine Exception nicht behandelt wird?",
+    "Options": [
+      "Das Programm läuft normal weiter",
+      "Die Exception wird an die aufrufende Methode weitergegeben",
+      "Die Exception wird ignoriert",
+      "Der Garbage Collector wird ausgelöst"
+    ],
+    "ExpectedAnswer": "Die Exception wird an die aufrufende Methode weitergegeben",
+    "Hint": "Unhandled Exceptions wandern im Aufruf-Stack nach oben.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Wie kann man eine Eigenschaft (Property) mit nur einem privaten Setter deklarieren?",
+    "Options": [
+      "public int Alter { get; private set; }",
+      "public int Alter { set; private get; }",
+      "private int Alter { get; set; }",
+      "public int Alter { private get; set; }"
+    ],
+    "ExpectedAnswer": "public int Alter { get; private set; }",
+    "Hint": "Nur der Setter ist privat, der Getter bleibt öffentlich.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Was ist das Ergebnis von 'null ?? \"Standard\"' in C#?",
+    "Options": [
+      "null",
+      "\"Standard\"",
+      "Compilerfehler",
+      "\"null ?? Standard\""
+    ],
+    "ExpectedAnswer": "\"Standard\"",
+    "Hint": "Der Null-Coalescing-Operator gibt den rechten Wert zurück, wenn der linke null ist.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Wie kann man eine Methode als abstrakt deklarieren?",
+    "Options": [
+      "public abstract void Methode();",
+      "public void Methode() abstract {}",
+      "abstract Methode() {}",
+      "public void abstract Methode();"
+    ],
+    "ExpectedAnswer": "public abstract void Methode();",
+    "Hint": "Abstrakte Methoden haben keinen Methodenkörper.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Was ist der Unterschied zwischen einer Schnittstelle (interface) und einer abstrakten Klasse?",
+    "Options": [
+      "Interfaces können keine Implementierungen enthalten (bis C# 8.0)",
+      "Abstrakte Klassen können Felder enthalten, Interfaces nicht",
+      "Eine Klasse kann mehrere Interfaces, aber nur eine abstrakte Klasse erben",
+      "Alle Antworten sind richtig"
+    ],
+    "ExpectedAnswer": "Alle Antworten sind richtig",
+    "Hint": "Überlege, was bei Mehrfachvererbung und Implementierung möglich ist.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Wie kann man ein Event in C# deklarieren?",
+    "Options": [
+      "public event EventHandler MeinEvent;",
+      "public Event MeinEvent;",
+      "event MeinEvent;",
+      "public delegate MeinEvent;"
+    ],
+    "ExpectedAnswer": "public event EventHandler MeinEvent;",
+    "Hint": "Events basieren meistens auf Delegates wie EventHandler.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Was ist das Ergebnis von 'int? x = null; int y = x ?? 5;'?",
+    "Options": [
+      "x ist null, y ist 5",
+      "x ist 5, y ist null",
+      "x ist null, y ist null",
+      "x ist 5, y ist 5"
+    ],
+    "ExpectedAnswer": "x ist null, y ist 5",
+    "Hint": "Der Null-Coalescing-Operator setzt y auf 5, wenn x null ist.",
+    "Difficulty": "Hard"
+  },
+  {
+    "Question": "Welche der folgenden Anweisungen erzeugt ein Lambda-Ausdruck in C#?",
+    "Options": [
+      "x => x * 2",
+      "lambda x: x * 2",
+      "function(x) { return x * 2; }",
+      "(x) -> x * 2"
+    ],
+    "ExpectedAnswer": "x => x * 2",
+    "Hint": "Der Pfeiloperator '=>' kennzeichnet Lambdas in C#.",
+    "Difficulty": "Hard"
   }
 ]
